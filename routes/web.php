@@ -20,4 +20,12 @@ Route::get('/', function () {
 
 Route::get('/buku', [BukuController::class, 'index']);
 
-Route::delete('buku/{id}', [BukuController::class, 'destroy']);
+Route::get('/buku/create', [BukuController::class, 'create'])->name('buku.create');
+
+Route::post('/buku', [BukuController::class, 'store'])->name('buku.store');
+
+Route::get('/buku/update/{id}', [BukuController::class, 'update'])->name('buku.update');
+
+Route::post('/buku/update/data{id}', [BukuController::class, 'updateData'])->name('buku.updateData');
+
+Route::post('buku/delete/{id}', [BukuController::class, 'destroy'])->name('buku.destroy');

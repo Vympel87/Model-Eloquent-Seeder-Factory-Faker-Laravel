@@ -29,3 +29,5 @@ Route::get('/buku/update/{id}', [BukuController::class, 'update'])->name('buku.u
 Route::post('/buku/update/data{id}', [BukuController::class, 'updateData'])->name('buku.updateData');
 
 Route::post('buku/delete/{id}', [BukuController::class, 'destroy'])->name('buku.destroy');
+
+Route::get('/buku/search', [BukuController::class,'search'])->name('buku.search');
